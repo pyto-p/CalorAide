@@ -121,3 +121,12 @@ class ProfileScreenView(BaseScreenView):
         plt.tight_layout()
         plt.savefig(f"assets/images/pie{number}.png")    
         plt.clf()
+
+    def go_log_out(self): 
+        # Open a file in write mode
+        file = open("username.txt", "w")
+        # Write some text to the file
+        file.write(" ")
+        # Close the file
+        file.close()
+        self.controller.change_screen("right", "login screen")

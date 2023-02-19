@@ -92,6 +92,7 @@ class HomeScreenModel(BaseScreenModel):
 
         self.updated_calorie_part = "intake history"
         self.notify_observers("calorie counter screen")
+        
 
     @multitasking.task
     def update_user_profile_data(self, user_input: dict):

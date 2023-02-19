@@ -94,6 +94,15 @@
                 on_release:
                     root.show_pie_chart_data(args[0])
                     visual.source = "assets/images/pie2.png"
+
+            MDFillRoundFlatButton:
+            # for last 14 days
+                text: "Log-out"
+                on_release:
+                    root.controller.done_progress = 0.0
+                    root.go_log_out()
+
+            
             
 # dynamic class
 <ChangeButton@MDRectangleFlatButton>:

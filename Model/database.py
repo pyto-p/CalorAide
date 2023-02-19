@@ -42,6 +42,7 @@ class DataBase:
         Args:
             table_name (str): the table under user table to be accessed.
         """
+        print(self.username)
         try:
             data = self._firebase.get(
                 f"USERDATA/{self.username}", table_name, connection=None

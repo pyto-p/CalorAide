@@ -125,7 +125,7 @@ class HomeScreenController:
             user_data["Gender"], user_data["Weight"], user_data["Height"], user_data["Age"]
         )
         calorie_goal = helpers.calculate_calorie_goal(
-            bmr, new_activity, user_data["Mode"], user_data["Goal"]
+            bmr, new_activity, user_data["Mode"], user_data["Intensity"]
         )
         self.model.update_user_profile_data({"Activity": new_activity})
         self.model.update_calorie_goal(float(calorie_goal), "UserInfo")
@@ -201,4 +201,3 @@ class HomeScreenController:
                 merged_calories[index] += calorie
         
         return merged_foods, merged_calories
-
